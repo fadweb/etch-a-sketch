@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 750px;
+    margin-top: 10px;
+}
+
+.box{
+    border: solid black 1px;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+}
+
+.box:hover{
+    background-color: blue;
+}

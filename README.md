@@ -1,0 +1,1 @@
+This program generates an "etch-a-sketch" that can have its dimensions customized via user input.

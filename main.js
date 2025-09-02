@@ -24,14 +24,15 @@ container.addEventListener("mouseover", (e) => {
 generateGrid(16);
 
 //re-generates grid with user input
+//handles non numbers & anything outside of range
 const gridBtn = document.querySelector("#gridBtn");
 gridBtn.addEventListener("click", () => {
     const newGrid = parseInt(prompt("Enter a number between 2-100"));
-    if (newGrid < 2 || newGrid > 100) {
-        alert("Try Again");
-    } else {
+    if (newGrid >= 2 && newGrid <= 100) {
         container.innerHTML = "";
         generateGrid(newGrid);
+    } else {
+        alert("Try Again");
     }
 });
 
@@ -39,7 +40,7 @@ gridBtn.addEventListener("click", () => {
 const clearBtn = document.querySelector("#clearBtn");
 clearBtn.addEventListener("click", () => {
     const boxes = document.querySelectorAll(".box");
-    boxes.forEach(box =>{
+    boxes.forEach(box => {
         box.style.backgroundColor = "";
     })
 })
